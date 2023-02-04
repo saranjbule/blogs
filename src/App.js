@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import Home from "./pages/home";
-import Admin from "./pages/admin";
-import User from "./pages/user";
+import Admin from "./pages/admin/admin";
+import User from "./pages/user/user";
 
 function App() {
   return (

@@ -1,16 +1,32 @@
 import { Typography } from "@mui/material";
 import Button from "@mui/material/Button";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import Grid from "@mui/material/Grid";
+import "./home.css";
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <>
-      <Button variant="contained" onClick={userAction} color="secondary">
-        <Typography>User</Typography>
-      </Button>
-      <Button variant="contained" onClick={adminAction} color="secondary">
-        <Typography>Admin</Typography>
-      </Button>
+      <Grid
+        container
+        direction="row"
+        justifyContent="space-around"
+        alignItems="center"
+        className="buttonContainer"
+      >
+        <Grid item>
+          <Button className="button" variant="contained" onClick={() => navigate("./user")}>
+            <Typography>User</Typography>
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button className="button" variant="contained" onClick={() => navigate("./admin")}>
+            <Typography>Admin</Typography>
+          </Button>
+        </Grid>
+      </Grid>
+      <Outlet />
     </>
   );
 }
