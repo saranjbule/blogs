@@ -1,16 +1,12 @@
-
 .adminContainer{
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-}
-
-.addButton{
-    margin: 30px;
+    padding:3%;
 }
 
 .addContent{
-    padding: 100px;
+    margin-top: 30px;
 }
 
-.submit{
+.submitButton{
     margin-top: 30px;
 }

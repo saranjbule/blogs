@@ -1,7 +1,9 @@
-import { Typography } from "@mui/material";
-import Button from "@mui/material/Button";
 import { Outlet, useNavigate } from "react-router-dom";
+import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import "./home.css";
 
 function Home() {
@@ -16,12 +18,22 @@ function Home() {
         className="buttonContainer"
       >
         <Grid item>
-          <Button className="button" variant="contained" onClick={() => navigate("./user")}>
+          <Button
+            className="button"
+            variant="contained"
+            startIcon={<AccountCircleIcon />}
+            onClick={() => navigate("./user")}
+          >
             <Typography>User</Typography>
           </Button>
         </Grid>
         <Grid item>
-          <Button className="button" variant="contained" onClick={() => navigate("./admin")}>
+          <Button
+            className="button"
+            variant="contained"
+            startIcon={<AdminPanelSettingsIcon />}
+            onClick={() => navigate("./admin")}
+          >
             <Typography>Admin</Typography>
           </Button>
         </Grid>
@@ -32,11 +44,6 @@ function Home() {
 }
 
 export default Home;
-
-// import { useState } from "react";
-// import { Outlet, Link } from "react-router-dom";
-// import Button from "@mui/material/Button";
-// import Grid from "@mui/material/Grid";
 
 // function Home() {
 //   const [blogs, setBlogs] = useState([]);

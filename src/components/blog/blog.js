@@ -4,20 +4,20 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-function Blog({ b }) {
+function Blog({ blog }) {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          {b.id}
+          {blog.id}
         </Typography>
         <Typography variant="h5" component="div">
-          {b.title}
+          {blog.title}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          {b.content}
+          {blog.content}
         </Typography>
-        <Typography variant="body2">{b.author}</Typography>
+        <Typography variant="body2">{blog.author}</Typography>
       </CardContent>
       <CardActions>
         <Button size="small">Update</Button>
